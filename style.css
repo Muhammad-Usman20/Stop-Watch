@@ -1,0 +1,166 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page centering */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #232526, #414345);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Main container centers everything vertically */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Circular stopwatch */
+.wrapper p {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #1c1c1c 60%, #00ffc3 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0 0 25px #00ffc3;
+    text-shadow: 0 0 10px #00ffc3;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Glowing animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #00ffc3;
+    }
+    to {
+        box-shadow: 0 0 25px #00ffc3;
+    }
+}
+
+/* Button group */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Buttons with icons */
+button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual button colors */
+.btn-start {
+    background: linear-gradient(135deg, #00c851, #007e33);
+}
+
+.btn-stop {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+}
+
+.btn-reset {
+    background: linear-gradient(135deg, #33b5e5, #0099cc);
+}
+
+/* Hover effect */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+button i {
+    font-size: 1.1rem;
+}
+/* Circle button base style */
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Start - Green */
+.btn-start {
+    background: linear-gradient(135deg, #00c851, #007e33);
+}
+
+/* Stop - Red */
+.btn-stop {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+}
+
+/* Reset - Blue */
+.btn-reset {
+    background: linear-gradient(135deg, #33b5e5, #0099cc);
+}
+
+/* Hover effect */
+.btn-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button container */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Responsive buttons */
+@media (max-width: 500px) {
+    .btn-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .wrapper p {
+        width: 200px;
+        height: 200px;
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
